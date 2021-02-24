@@ -1851,7 +1851,7 @@ instance FromText InstanceType where
         "r5a.large" -> pure R5A_Large
         "m5a.xlarge" -> pure M5A_XLarge
         "m5a.large" -> pure M5A_Large
-        "c5d.24xlarge" -> C5D_24XLarge
+        "c5d.24xlarge" -> pure C5D_24XLarge
         "t1.micro" -> pure T1_Micro
         "t2.2xlarge" -> pure T2_2XLarge
         "t2.large" -> pure T2_Large
