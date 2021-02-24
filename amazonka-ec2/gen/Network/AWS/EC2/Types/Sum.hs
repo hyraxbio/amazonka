@@ -1751,6 +1751,7 @@ data InstanceType
   | T3_2XLarg
   | M5A_XLarge
   | M5A_Large
+  | C5D_24XLarge
 
   deriving (Eq, Ord, Read, Show, Enum, Bounded, Data, Typeable, Generic)
 
@@ -1850,6 +1851,7 @@ instance FromText InstanceType where
         "r5a.large" -> pure R5A_Large
         "m5a.xlarge" -> pure M5A_XLarge
         "m5a.large" -> pure M5A_Large
+        "c5d.24xlarge" -> C5D_24XLarge
         "t1.micro" -> pure T1_Micro
         "t2.2xlarge" -> pure T2_2XLarge
         "t2.large" -> pure T2_Large
@@ -1992,6 +1994,7 @@ instance ToText InstanceType where
         T3_2XLarg -> "t3.2xlarge"
         M5A_XLarge -> "m5a.xlarge"
         M5A_Large -> "m5a.large"
+        C5D_24XLarge -> "c5d.24xlarge"
 
 instance Hashable     InstanceType
 instance NFData       InstanceType
